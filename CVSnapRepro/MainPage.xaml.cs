@@ -7,18 +7,12 @@
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            List<int> list = new List<int>();   
+            for (int i = 0; i < 100; i++)
+            {
+                list.Add(i);
+            }
+            MainCV.ItemsSource = list;
         }
     }
 
